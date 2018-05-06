@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: Genericons;
+    src: url('./fonts/genericons-regular-webfont.woff') format('woff'),
+    url('./fonts/genericons-regular-webfont.eot') format('truetype')
+}
+body {
+    font-family: sans-serif;
+    background: #222;
+    padding-top: 50px;
+}
+header h1 {
+    text-align: center;    
+    color: #eee;
+    margin-bottom: 20px;
+}
+.accordion {
+    background: #333;
+    margin: auto;
+    width: 600px;
+    height: 150px;
+    overflow: hidden;
+    font-size: 0;
+    list-style: none;
+}
+
+/* tab */
+.tab {
+    display: inline-block;
+    background: #444;
+    border-right: 1px solid #777;
+    width: 80px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+    transition: width 0.3s ease-in-out;
+}
+.tab:hover{
+    width: 360px;
+}
+
+/* content */
+.tab .content {
+    background: #fff;
+    margin-left: 80px;
+    height: 150px;
+    width: 280px;
+    padding: 20px;
+}
+.tab .content h1{
+	font-size: 1.5rem;
+	margin-bottom: 10px;
+}
+.tab .content p {
+    font-size: 1rem;
+}
+
+/* anchor */
+.social a:before, .social a:after{
+    font-family: Genericons;
+    position: absolute;
+    color: white;
+    height: 100%;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease-in-out;
+}
+/* initial */
+.social a:before{
+    font-size: 32px;
+}
+.social a:after{
+    font-size: 48px;
+    transform: translateX(80px);
+}
+/* hover */
+.tab:hover .social a:before{
+    transform: translateX(-80px);
+}
+.tab:hover .social a:after{
+    transform: translateX(0);
+}
+
+/* Youtube */
+.youtube a:before, .youtube a:after{
+    content: '\f213'
+}
+.youtube a:after{
+    background: red;
+}
+
+/* facebook */
+.facebook a:before, .facebook a:after{
+    content: '\f203'
+}
+.facebook a:after{
+    background: darkblue;
+}
+
+/* twitter */
+.twitter a:before, .twitter a:after{
+    content: '\f202'
+}
+.twitter a:after{
+    background: cornflowerblue;
+}
+/* instagram */
+.instagram a:before, .instagram a:after{
+    content: '\f215'
+}
+.instagram a:after{
+    background: purple;
+}
